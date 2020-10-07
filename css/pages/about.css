@@ -1,0 +1,9 @@
+body{
+    background: radial-gradient(blue, black, white,);
+}
+#tsu{
+    color: #009dff;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}

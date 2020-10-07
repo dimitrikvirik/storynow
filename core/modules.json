@@ -1,0 +1,23 @@
+{
+  "info": [
+    {
+      "version": "0.1 alpha",
+      "support languages": ["georgian", "russian", "english"]
+    }
+  ],
+  "modules": [{
+    "login": [
+      {
+        "version": "0.1 alpha",
+        "active": true
+      }
+    ],
+    "search": [
+      {
+        "version": "0.1 alpha",
+        "active": true
+      }
+    ]
+  }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "search",
+  "WebLogic": "1.0",
+  "active": true,
+  "version": "1.0",
+  "dependence":  null,
+  "files": ["search.php"],
+  "author": "Dimitri Kvirikashvili",
+  "support languages": ["georgian"]
+}
