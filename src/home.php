@@ -1,5 +1,6 @@
-<p>
+<h1 id="waiting">
     საიტი ჯერ არაა მზად...
     იგეგმება ასეთი საიტი:
-    <img src="img/example.png">
-</p>
+
+</h1>
+<img src="img/example.png">
