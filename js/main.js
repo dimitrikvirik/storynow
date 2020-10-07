@@ -1,6 +1,8 @@
 $(document).ready(function (){
-     $("#ms").click(function (){
-          $("#ms").text("Hello Georgia!");
-     });
+    var a = 0;
+    setInterval(function (){
+        a++;
+        $("#timer").html("გავიდა " + a + " წამი!");
+    }, 1000);
 });
 
