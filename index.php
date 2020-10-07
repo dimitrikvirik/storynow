@@ -31,7 +31,7 @@ $curpage = PageMaker::PageBuilder();
     </head>
     <body>
         <?
-        echo "TEST";
+        echo "TEST 2";
                 $curpage->ShowPage();
 
                 $a = 10;
