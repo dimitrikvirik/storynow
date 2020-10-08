@@ -34,7 +34,7 @@ $curpage = PageMaker::PageBuilder();
     <body>
 
         <?
-        highlight_string("<?php\n\$data =\n" . var_export($_SERVER, true) . ";\n?>");
+
                 $curpage->ShowPage();
               
         ?>
