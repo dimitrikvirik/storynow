@@ -21,25 +21,24 @@ switch (PageMaker::GetUrl()) {
 
 $curpage = PageMaker::PageBuilder();
 ?>
+<!DOCTYPE html>
 <html lang="ge">
     <head>
         <meta charset="utf-8">
         <title><? $curpage->ShowTitle(); ?></title>
-        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
         <?
             $curpage->ConnectCSS();
            ?>
-        <script src="js/jquery-3.5.1.min.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/main.js"></script>
-        <?
-            $curpage->ConnectJS();
-        ?>
     </head>
     <body>
         <?
                 $curpage->ShowPage();
-              
+
+        ?>
+        <script src="js/main.js"></script>
+        <?
+        $curpage->ConnectJS();
         ?>
     </body>
 </html>
