@@ -1,4 +1,3 @@
-
 const dragAndDrop = () => {
     const card = document.querySelector(".js-card");
     const cells = document.querySelectorAll(".js-cell");
@@ -34,4 +33,24 @@ const dragAndDrop = () => {
     card.addEventListener("dragend", dragEnd);
 }
 dragAndDrop();
+const ChangeText = (element) => {
+    const title = document.querySelector(element + " span");
+    var onChaning = false;
+    var newvalue;
+    const Ondblick = function (){
+        if(!onChaning) {
+            onChaning = true;
+            this.innerHTML = "<input type='text' value='" + this.innerHTML + "'>";
+        }
+    };
+    const onFocusOut = function (){
+    newvalue = document.querySelector(element + " span input").value;
+        this.innerHTML = newvalue;
+        onChaning = false;
+    };
 
+    title.addEventListener("dblclick", Ondblick);
+    title.addEventListener("focusout", onFocusOut);
+}
+ChangeText(".list_card-header");
+ChangeText(".list_card-info");

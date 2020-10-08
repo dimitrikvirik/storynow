@@ -8,10 +8,10 @@
         <li class="list_cell js-cell">
             <div class="list_card js-card" draggable="true">
                 <div class="list_card-header">
-                    task title
+                    <span>Title</span>
                 </div>
                 <div class="list_card-info">
-                    task description
+                    <span>task description</span>
                 </div>
             </div>
         </li>

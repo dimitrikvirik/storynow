@@ -54,10 +54,15 @@ body{
     cursor: all-scroll;
 }
 .list_card-header{
+    display: flex;
+    flex-wrap: wrap;
     font-weight: bold;
     padding: 12px 20px;
     background-color: #0747a6;
     color: white;
+}
+.list_card-header span:hover, .list_card-info span:hover{
+    cursor: text;
 }
 .list_card-info{
     display: flex;
