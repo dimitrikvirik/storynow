@@ -112,18 +112,17 @@ class WebLogic{
 class PageMaker extends WebLogic
 {
     static $pages = array();
-    static $curpage;
 
     static function AddPage($page, $filename, $title, $js, $css)
     {
         array_push(self::$pages, ["/".$page, $filename, $title, $js, $css]);
     }
-    static  function GetUrl(): string{
+    static  function GetUrl(){
        return $_SERVER["REDIRECT_URL"];
     }
     static function PageBuilder(): Page
     {
-        if ("/" == self::GetUrl()) {
+        if (null == self::GetUrl()) {
             return new Page("home", "home.php", "Main Page", null, null);
         }
         foreach (self::$pages as $page) {
