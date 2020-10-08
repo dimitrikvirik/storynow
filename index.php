@@ -32,9 +32,11 @@ $curpage = PageMaker::PageBuilder();
         ?>
     </head>
     <body>
-        <h1 id="timer"></h1>
+
         <?
+        highlight_string("<?php\n\$data =\n" . var_export($_SERVER, true) . ";\n?>");
                 $curpage->ShowPage();
+              
         ?>
     </body>
 </html>

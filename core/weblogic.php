@@ -119,7 +119,7 @@ class PageMaker extends WebLogic
         array_push(self::$pages, ["/".$page, $filename, $title, $js, $css]);
     }
     static  function GetUrl(): string{
-       return $_SERVER["REQUEST_URI"];
+       return $_SERVER["REDIRECT_URL"];
     }
     static function PageBuilder(): Page
     {
