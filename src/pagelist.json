@@ -1,0 +1,24 @@
+{
+  "pages": [{
+   "name": "home",
+    "dir": "home.php",
+    "title": "Main Page",
+    "js": [],
+    "css": []
+  },
+    {
+      "name": "dog",
+      "dir": "dog.php",
+      "title": "My Dog page!",
+      "js": [],
+      "css": []
+    },
+    {
+      "name": "dog",
+      "dir": "dog.php",
+      "title": "My Dog page!",
+      "js": [],
+      "css": []
+    }
+  ]
+}

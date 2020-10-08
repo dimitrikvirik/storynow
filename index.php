@@ -10,10 +10,14 @@ $find_module = new Module("module/search/search.json");
 //IMPORTANT: DON'T FORGET ADD LINE to .htacces
 //EXAMPLE: RewriteRule ^yourpage ?page=yourpage [NC,L]
 use WebLogic\PageMaker as PageMaker;
-PageMaker::AddPage("dog", "dog.php", "my dog page!", null, null);
-PageMaker::AddPage("about-us", "about.php", "About Us", array("about.js", "about2.js"), array("about.css"));
-
-use WebLogic\Page as Page;
+switch (PageMaker::GetUrl()) {
+    case  "/dog":
+        PageMaker::AddPage("dog", "dog.php", "my dog page!", null, null);
+        break;
+    case "/about-us":
+        PageMaker::AddPage("about-us", "about.php", "About Us", array("about.js", "about2.js"), array("about.css"));
+        break;
+}
 
 $curpage = PageMaker::PageBuilder();
 ?>
@@ -21,6 +25,7 @@ $curpage = PageMaker::PageBuilder();
     <head>
         <meta charset="utf-8">
         <title><? $curpage->ShowTitle(); ?></title>
+        <link href="css/index.css" rel="stylesheet" type="text/css">
         <?
             $curpage->ConnectCSS();
            ?>
@@ -32,9 +37,7 @@ $curpage = PageMaker::PageBuilder();
         ?>
     </head>
     <body>
-
         <?
-
                 $curpage->ShowPage();
               
         ?>
