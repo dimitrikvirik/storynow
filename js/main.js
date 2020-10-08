@@ -63,5 +63,5 @@ const ChangeText = (element, maxlenght) => {
     title.addEventListener("dblclick", Ondblick);
     title.addEventListener("focusout", onFocusOut);
 }
-ChangeText(".list_card-header", 15);
-ChangeText(".list_card-info", 15);
+ChangeText(".list_card-header", 25);
+ChangeText(".list_card-info", 25);
