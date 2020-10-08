@@ -84,3 +84,10 @@ body{
     background-color: #d1d8e2;
 
 }
+input[type="text"]
+{
+    font-weight: bold;
+    outline: none;
+    background: transparent;
+    border: none;
+}

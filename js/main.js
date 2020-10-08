@@ -33,18 +33,29 @@ const dragAndDrop = () => {
     card.addEventListener("dragend", dragEnd);
 }
 dragAndDrop();
-const ChangeText = (element) => {
+const ChangeText = (element, maxlenght) => {
     const title = document.querySelector(element + " span");
     var onChaning = false;
     var newvalue;
+    var oldvalue;
     const Ondblick = function (){
         if(!onChaning) {
             onChaning = true;
-            this.innerHTML = "<input type='text' value='" + this.innerHTML + "'>";
+            oldvalue =  this.innerHTML;
+            this.innerHTML = "<input type='text' value='" +  oldvalue  + "'>";
         }
     };
     const onFocusOut = function (){
     newvalue = document.querySelector(element + " span input").value;
+        var format = /[ `@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/~]/;
+        if(format.test(newvalue.replace(/\s/g, ''))){
+            alert("No Symbol!");
+            newvalue = oldvalue;
+        }
+        else if(newvalue.length >= maxlenght){
+            alert("Too big Text!");
+            newvalue = oldvalue;
+        }
         this.innerHTML = newvalue;
         onChaning = false;
     };
@@ -52,5 +63,5 @@ const ChangeText = (element) => {
     title.addEventListener("dblclick", Ondblick);
     title.addEventListener("focusout", onFocusOut);
 }
-ChangeText(".list_card-header");
-ChangeText(".list_card-info");
+ChangeText(".list_card-header", 15);
+ChangeText(".list_card-info", 15);
